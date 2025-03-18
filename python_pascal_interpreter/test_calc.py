@@ -11,7 +11,10 @@ def test_addition():
 @pytest.mark.parametrize("input_string, expected_result", [
     ("13+5", 18),
     ("5+13", 18),
-    ("123+4",127)
+    ("123+4", 127),
+    ("4+123", 127),
+    ("123+456", 579),
+    ("123 + 4", 127),
 ])
 def test_multivalue_addition(input_string, expected_result):
     interpreter = Interpreter(input_string)
